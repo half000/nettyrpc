@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.half.nettyrpc</groupId>
+	<artifactId>nettyrpc</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging> <!--父模块打包类型必须为pom-->
+
+	<name>nettyrpc</name>
+	<description>NettyRpc project for Spring Boot</description>
+
+	<modules>
+		<module>rpcserver</module>
+		<module>rpcclient</module>
+		<module>core</module>
+	</modules>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<!-- 在properties中统一控制依赖包的版本，更清晰-->
+		<netty.version>4.1.23.Final</netty.version>
+		<protobuf.version>3.5.1</protobuf.version>
+		<grpc.version>0.13.2</grpc.version>
+		<nettyrpc.version>0.0.1-SNAPSHOT</nettyrpc.version>
+        <gson.version>2.2.4</gson.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>${netty.version}</version>
+		</dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+	</dependencies>
+
+
+</project>

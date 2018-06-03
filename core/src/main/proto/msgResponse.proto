@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_package = "com.half.nettyRpc.protobuf";
+option java_outer_classname = "MsgResponse";
+
+message msgResponse{
+    int64 messageId = 1;   //消息id
+    int32 code = 2;        //结果代码 0-失败 1-成功
+    string msg = 3;        //结果内容
+    string data = 4;       //内容json
+
+}
